@@ -13,7 +13,7 @@ package org.jacoco.core.data;
 
 public class SocketClientData implements IClientInfoVisitor {
 
-	private ClientInfo info = new ClientInfo(0);
+	private ClientInfo info = new ClientInfo(0, "anyone");
 	
 	public ClientInfo getInfo() {
 		return info;

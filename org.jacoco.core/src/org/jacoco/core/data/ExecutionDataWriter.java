@@ -102,10 +102,11 @@ public class ExecutionDataWriter implements ISessionInfoVisitor,
 	 * @throws IOException
 	 *             if the header can't be written
 	 */
-	protected void writeFirstHand(long id) throws IOException {
+	protected void writeFirstHand(long id, String sessionid) throws IOException {
 		
 		out.writeByte(BLOCK_FIRSTHAND);
 		out.writeLong(id);
+		out.writeUTF(sessionid);
 		out.flush();
 		System.out.println("writeFirstHand" );
 	}

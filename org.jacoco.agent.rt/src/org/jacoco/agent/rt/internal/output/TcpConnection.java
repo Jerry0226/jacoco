@@ -57,7 +57,7 @@ class TcpConnection implements IRemoteCommandVisitor {
 		this.reader.setRemoteCommandVisitor(this);
 		this.initialized = true;
 		if (options != null && options.getId(AgentOptions.DEFAULT_ID, 0) > 0) {
-			writer.writeFirstHand(options.getId(AgentOptions.DEFAULT_ID, 0));
+			writer.writeFirstHand(options.getId(AgentOptions.DEFAULT_ID, 0), options.getSessionId());
 		}
 		
 	}

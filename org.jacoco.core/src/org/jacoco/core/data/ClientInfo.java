@@ -13,14 +13,23 @@ package org.jacoco.core.data;
 
 public class ClientInfo {
 	private long id;
+	private String sessionid;
+	
+    public String getSessionid() {
+        return sessionid;
+    }
+    public void setSessionid(String sessionid) {
+        this.sessionid = sessionid;
+    }
     public long getId() {
 		return id;
 	}
 	public void setId(long id) {
 		this.id = id;
 	}
-	public ClientInfo(long id) {
+	public ClientInfo(long id, String sessionid) {
 		this.id = id;
+		this.sessionid = sessionid;
 	}
 	
 	
