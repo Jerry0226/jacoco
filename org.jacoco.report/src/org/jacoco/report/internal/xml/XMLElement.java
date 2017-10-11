@@ -24,7 +24,12 @@ import java.io.Writer;
  */
 public class XMLElement {
 
-	private static final char SPACE = ' ';
+    /**
+     * 换行符
+     */
+	private static final String NEWLINE = "\r\n";
+
+    private static final char SPACE = ' ';
 
 	private static final char EQ = '=';
 

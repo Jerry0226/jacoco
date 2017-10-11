@@ -561,6 +561,8 @@ public class ReportTask extends Task {
 			throws IOException {
 		final CoverageBuilder builder = new CoverageBuilder();
 		final Analyzer analyzer = new Analyzer(executionDataStore, builder);
+		
+		
 		for (final Iterator<?> i = group.classfiles.iterator(); i.hasNext();) {
 			final Resource resource = (Resource) i.next();
 			if (resource.isDirectory() && resource instanceof FileResource) {

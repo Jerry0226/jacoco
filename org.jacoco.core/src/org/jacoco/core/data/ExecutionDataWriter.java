@@ -108,7 +108,7 @@ public class ExecutionDataWriter implements ISessionInfoVisitor,
 		out.writeLong(id);
 		out.writeUTF(sessionid);
 		out.flush();
-		System.out.println("writeFirstHand" );
+		System.out.println("writeFirstHand id: " + id + " session: " + sessionid );
 	}
 	
 	public void visitClassExecution(final ExecutionData data) {

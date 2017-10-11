@@ -206,8 +206,9 @@ public class ExecutionDataReader {
 	private void readClientId() throws IOException {
 		
 		long id = in.readLong();
-		String sessionid = in.readUTF();
 		System.out.println("in.readLong(): " + id);
+		String sessionid = in.readUTF();
+		System.out.println("readClientId sessionid: " + sessionid);
 		clientInfoVisitor.visitClientInfo(new ClientInfo(id, sessionid));
 	}
 	

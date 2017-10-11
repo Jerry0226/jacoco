@@ -14,6 +14,7 @@ package org.jacoco.ant;
 import static java.lang.String.format;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -113,4 +114,8 @@ public class InstrumentTask extends Task {
 					resource), e, getLocation());
 		}
 	}
+	
+	
+	
+	
 }

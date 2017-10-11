@@ -47,6 +47,8 @@ public final class XMLCoverageWriter {
 			final String tagname, final String name) throws IOException {
 		final XMLElement child = parent.element(tagname);
 		child.attr("name", name);
+        //modify by chm 2017-03-07 为了使report.xml文件能够换行
+//        child.writer.append("\r\n");
 		return child;
 	}
 
@@ -97,6 +99,11 @@ public final class XMLCoverageWriter {
 		if (line != -1) {
 			element.attr("line", line);
 		}
+		
+//		final int lastline = m.getLastLine();
+//        if (lastline != -1) {
+//            element.attr("lastline", lastline);
+//        }
 		writeCounters(m, element);
 	}
 

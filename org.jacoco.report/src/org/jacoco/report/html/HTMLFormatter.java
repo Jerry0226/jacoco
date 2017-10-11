@@ -153,6 +153,9 @@ public class HTMLFormatter implements IHTMLReportContext {
 				CounterColumn.newMissed(entity, locale), false);
 		table.add(label, Styles.CTR2, CounterColumn.newTotal(entity, locale),
 				false);
+		//增加cov的覆盖率比例
+		table.add("Cov.", Styles.CTR2, new PercentageColumn(entity, locale),
+            false);
 	}
 
 	public String getFooterText() {
